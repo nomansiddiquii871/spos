@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function RevealOnScroll() {
-  useEffect(() => {
-    const els = document.querySelectorAll<HTMLElement>(".reveal");
-    if (!els.length) return;
+  const pathname = usePathname();
 
+  useEffect(() => {
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -19,9 +19,42 @@ export default function RevealOnScroll() {
       { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
 
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
-  }, []);
+    const observed = new WeakSet<Element>();
+    const observeRevealElements = (root: ParentNode = document) => {
+      const els = root.querySelectorAll<HTMLElement>(".reveal");
+      els.forEach((el) => {
+        if (!observed.has(el)) {
+          observed.add(el);
+          io.observe(el);
+        }
+      });
+    };
+
+    observeRevealElements();
+
+    // Watch for route-transition content and any later dynamic inserts.
+    const mo = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (!(node instanceof HTMLElement)) return;
+
+          if (node.classList.contains("reveal") && !observed.has(node)) {
+            observed.add(node);
+            io.observe(node);
+          }
+
+          observeRevealElements(node);
+        });
+      });
+    });
+
+    mo.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      mo.disconnect();
+      io.disconnect();
+    };
+  }, [pathname]);
 
   return null;
 }

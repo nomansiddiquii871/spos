@@ -29,6 +29,7 @@ export default function Navbar() {
 
   useEffect(() => {
     setOpen(false);
+    document.body.style.overflow = "";
   }, [pathname]);
 
   useEffect(() => {
@@ -51,7 +52,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
+      <nav className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-[#3355FF] to-[#8A5FFF] text-white font-black">
             S
@@ -59,7 +60,7 @@ export default function Navbar() {
           <span className="font-bold text-lg tracking-tight">SPOS</span>
         </Link>
 
-        <ul className="hidden lg:flex items-center gap-7">
+        <ul className="desktop-only items-center gap-7">
           {NAV.map((item) => (
             <li key={item.href}>
               <Link
@@ -76,7 +77,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden lg:flex">
+        <div className="desktop-only">
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#3355FF] to-[#4A73FF] px-5 py-2.5 text-sm font-semibold text-white btn-glow hover:brightness-110 transition"
@@ -84,20 +85,20 @@ export default function Navbar() {
             Get Started <ArrowRight size={16} />
           </Link>
         </div>
-
-        <button
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          className="inline-flex lg:hidden items-center justify-center rounded-md border border-white/15 bg-[#0B1224]/70 p-2 text-white shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:bg-white/10"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
       </nav>
 
+      <button
+        aria-label="Toggle menu"
+        aria-expanded={open}
+        className="mobile-only-inline fixed right-4 top-4 md:top-6 z-[80] items-center justify-center rounded-md border border-white/20 bg-[#0B1224]/85 p-2 text-white shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur md:hidden"
+        onClick={() => setOpen((v) => !v)}
+      >
+        {open ? <X size={22} /> : <Menu size={22} />}
+      </button>
+
       {open && (
-        <div className="lg:hidden fixed inset-0 top-16 md:top-20 z-[60] border-t border-white/10 bg-[#070B1A]/95 backdrop-blur-md overflow-y-auto">
-          <ul className="px-4 sm:px-6 py-4 space-y-1">
+        <div className="fixed left-0 right-0 top-16 z-[60] border-t border-white/10 bg-[#070B1A]/95 backdrop-blur-md overflow-y-auto max-h-[calc(100vh-64px)]">
+          <ul className="px-4 sm:px-6 py-4 space-y-1 w-full">
             {NAV.map((item) => (
               <li key={item.href}>
                 <Link
