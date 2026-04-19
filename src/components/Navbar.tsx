@@ -27,6 +27,17 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname?.startsWith(href);
 
@@ -77,7 +88,7 @@ export default function Navbar() {
         <button
           aria-label="Toggle menu"
           aria-expanded={open}
-          className="lg:hidden inline-flex items-center justify-center rounded-md p-2 text-white/90 hover:bg-white/5"
+          className="inline-flex lg:hidden items-center justify-center rounded-md border border-white/15 bg-[#0B1224]/70 p-2 text-white shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:bg-white/10"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X size={22} /> : <Menu size={22} />}
@@ -85,7 +96,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="lg:hidden border-t border-white/10 bg-[#070B1A]/95 backdrop-blur-md">
+        <div className="lg:hidden fixed inset-0 top-16 md:top-20 z-[60] border-t border-white/10 bg-[#070B1A]/95 backdrop-blur-md overflow-y-auto">
           <ul className="px-4 sm:px-6 py-4 space-y-1">
             {NAV.map((item) => (
               <li key={item.href}>
