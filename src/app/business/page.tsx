@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
 import BusinessHero from "@/components/business/BusinessHero";
-import MeasurableGrowth from "@/components/business/MeasurableGrowth";
-import GrowthFeatures from "@/components/business/GrowthFeatures";
-import SuccessCarousel from "@/components/business/SuccessCarousel";
+import BusinessIntro from "@/components/business/BusinessIntro";
+import BusinessProcess from "@/components/business/BusinessProcess";
+import BusinessEdge from "@/components/business/BusinessEdge";
+import BusinessCTA from "@/components/business/BusinessCTA";
 
 export const metadata: Metadata = {
-  title: "Business Growth Solutions — SPOS",
+  title: "Business Growth Solutions — Clovpay",
   description:
-    "Measurable growth for modern retail, F&B, gyms and service businesses. See how SPOS drives ROI.",
+    "Measurable growth for modern retail, F&B, gyms and service businesses. See how Clovpay drives ROI.",
 };
 
 export default function BusinessPage() {
   return (
     <>
       <BusinessHero />
-      <MeasurableGrowth />
-      <GrowthFeatures />
-      <SuccessCarousel />
+      <BusinessIntro />
+      <BusinessProcess />
+      <BusinessEdge />
+      <BusinessCTA />
     </>
   );
 }

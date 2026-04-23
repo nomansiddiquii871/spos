@@ -52,7 +52,7 @@ const panels: Panel[] = [
     title: "Smart Integrations",
     desc: "Plug into QuickBooks, Shopify, Stripe and 80+ more tools.",
     image:
-      "https://images.unsplash.com/photo-1551288049-48b94d0e7e1e?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80",
     icon: Zap,
   },
 ];
@@ -66,12 +66,12 @@ export default function CapabilitiesGallery() {
         <SectionHeader
           pill={
             <span className="flex items-center gap-1.5">
-              <Zap size={13} className="text-[#4A73FF]" /> Advanced Capabilities
+              <Zap size={13} className="text-[#1FA7A1]" /> Advanced Capabilities
             </span>
           }
-          gradientText="Powered"
-          rest="by Innovation"
-          subtitle="Explore what makes SPOS the most capable POS platform on the market."
+          gradientText="Advanced"
+          rest="Capabilities"
+          subtitle="Explore what makes Clovpay the most capable payment platform on the market."
         />
 
         <div className="reveal hidden md:flex gap-3 h-[460px] w-full overflow-hidden rounded-3xl">
@@ -111,7 +111,7 @@ export default function CapabilitiesGallery() {
                 )}
                 {isActive && (
                   <div className="absolute inset-0 flex flex-col justify-end p-6">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#3355FF] to-[#8A5FFF] mb-4">
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#1FA7A1] to-[#0F6F73] mb-4">
                       <Icon className="h-5 w-5 text-white" />
                     </span>
                     <h3 className="text-2xl md:text-3xl font-extrabold text-white">
@@ -144,7 +144,7 @@ export default function CapabilitiesGallery() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
                 <div className="absolute inset-0 flex flex-col justify-end p-5">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-[#3355FF] to-[#8A5FFF] mb-3">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-[#1FA7A1] to-[#0F6F73] mb-3">
                     <Icon className="h-4 w-4 text-white" />
                   </span>
                   <h3 className="text-xl font-extrabold text-white">

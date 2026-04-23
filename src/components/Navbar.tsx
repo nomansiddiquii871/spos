@@ -4,14 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
+import BrandLogo from "./BrandLogo";
 
 const NAV = [
   { href: "/", label: "Home" },
   { href: "/business", label: "Business" },
-  { href: "/services", label: "Services" },
-  { href: "/equipment", label: "Equipment" },
   { href: "/about", label: "About" },
-  { href: "/faqs", label: "FAQs" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -28,11 +26,6 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    setOpen(false);
-    document.body.style.overflow = "";
-  }, [pathname]);
-
-  useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
@@ -46,6 +39,7 @@ export default function Navbar() {
 
   return (
     <header
+      key={pathname}
       className={`fixed top-0 left-0 right-0 z-50 transition-all ${
         scrolled
           ? "bg-[#070B1A]/90 backdrop-blur-md border-b border-white/5"
@@ -53,12 +47,7 @@ export default function Navbar() {
       }`}
     >
       <nav className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 shrink-0">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-[#3355FF] to-[#8A5FFF] text-white font-black">
-            S
-          </span>
-          <span className="font-bold text-lg tracking-tight">SPOS</span>
-        </Link>
+        <BrandLogo href="/" width={148} height={48} imageClassName="h-12 w-auto object-contain" />
 
         <ul className="desktop-only items-center gap-7">
           {NAV.map((item) => (
@@ -80,7 +69,7 @@ export default function Navbar() {
         <div className="desktop-only">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#3355FF] to-[#4A73FF] px-5 py-2.5 text-sm font-semibold text-white btn-glow hover:brightness-110 transition"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#1FA7A1] to-[#0F6F73] px-5 py-2.5 text-sm font-semibold text-white btn-glow hover:brightness-110 transition"
           >
             Get Started <ArrowRight size={16} />
           </Link>
@@ -118,7 +107,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={closeMenu}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#3355FF] to-[#4A73FF] px-5 py-3 text-sm font-semibold text-white"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#1FA7A1] to-[#0F6F73] px-5 py-3 text-sm font-semibold text-white"
               >
                 Get Started <ArrowRight size={16} />
               </Link>

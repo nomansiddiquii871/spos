@@ -3,10 +3,10 @@ import Link from "next/link";
 import { SectionPill } from "@/components/ui";
 
 const stats = [
-  { icon: CreditCard, value: "$100B", label: "Annual Transactions" },
-  { icon: Building2, value: "10+", label: "Payment Methods" },
-  { icon: Globe, value: "10", label: "International Offices" },
-  { icon: Award, value: "98%", label: "Client Satisfaction" },
+  { icon: CreditCard, value: "99.9%", label: "Uptime" },
+  { icon: Building2, value: "Next-Day", label: "Funding" },
+  { icon: Globe, value: "Multi-Location", label: "Sync" },
+  { icon: Award, value: "100+", label: "Device Options" },
 ];
 
 export default function Hero() {
@@ -35,34 +35,33 @@ export default function Hero() {
         <div className="max-w-2xl">
           <div className="reveal">
             <SectionPill>
-              <Zap size={14} className="text-[#4A73FF]" />
-              Next-Gen POS Solutions
+              <Zap size={14} className="text-[#1FA7A1]" />
+              Trusted Payment Infrastructure
             </SectionPill>
           </div>
 
           <h1 className="reveal mt-6 text-[40px] leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
-            <span className="text-gradient">Embrace Diversity</span>
+            <span className="text-gradient">Empowering Merchants</span>
             <br />
-            To Accelerate
+            Across US with World-Class
             <br />
-            Your Business
+            Payment Tech.
           </h1>
 
           <p className="reveal mt-6 text-base sm:text-lg text-white/75 max-w-xl leading-relaxed">
-            A next-generation POS platform — payments, e-commerce, loyalty,
-            analytics, and cloud all in one beautifully crafted ecosystem built
-            for modern commerce.
+            All-in-one payment solutions to streamline operations, accelerate
+            growth, and secure every transaction.
           </p>
 
           <div className="reveal mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#3355FF] to-[#4A73FF] px-6 py-3.5 font-semibold text-white btn-glow hover:brightness-110 transition"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#1FA7A1] to-[#0F6F73] px-6 py-3.5 font-semibold text-white btn-glow hover:brightness-110 transition"
             >
-              Start Your Journey <ArrowRight size={18} />
+              Get Started Today <ArrowRight size={18} />
             </Link>
             <Link
-              href="/services"
+              href="/business"
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3.5 font-semibold text-white hover:bg-white/10 transition"
             >
               <Play size={16} /> Watch Demo
@@ -72,7 +71,7 @@ export default function Hero() {
           <div className="reveal mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-4">
             {stats.map((s) => (
               <div key={s.label} className="flex flex-col">
-                <s.icon size={18} className="text-[#4A73FF] mb-2" />
+                <s.icon size={18} className="text-[#1FA7A1] mb-2" />
                 <div className="text-2xl sm:text-3xl font-extrabold text-white">
                   {s.value}
                 </div>

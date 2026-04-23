@@ -18,32 +18,50 @@ export default function BusinessHero() {
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <div className="reveal">
           <SectionPill>
-            <Rocket size={14} className="text-[#4A73FF]" />
-            Business Growth Solutions
+            <Rocket size={14} className="text-[#1FA7A1]" />
+            Independent Sales Organization
           </SectionPill>
         </div>
         <h1 className="reveal mt-6 text-[44px] leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
-          <span className="text-gradient">Grow Your</span>
+          <span className="text-white">The Right</span>
           <br />
-          Business
+          <span className="text-white">Processor</span>
+          <br />
+          <span className="text-gradient">For Every Merchant</span>
         </h1>
         <p className="reveal mt-6 text-base sm:text-lg text-white/75 max-w-2xl mx-auto leading-relaxed">
-          Turn every transaction into an opportunity — smarter insights, deeper
-          loyalty and operations that scale with you.
+          Clovpay is an ISO that helps merchants cut through the noise, compare
+          processing options, and launch with the setup that best fits their
+          business.
         </p>
         <div className="reveal mt-8 flex flex-col sm:flex-row justify-center gap-3">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#3355FF] to-[#4A73FF] px-6 py-3.5 font-semibold text-white btn-glow hover:brightness-110 transition"
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#1FA7A1] to-[#0F6F73] px-6 py-3.5 font-semibold text-white btn-glow hover:brightness-110 transition"
           >
-            Start Growing Today <ArrowRight size={18} />
+            Talk to Us <ArrowRight size={18} />
           </Link>
           <Link
-            href="#success"
+            href="#"
             className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3.5 font-semibold text-white hover:bg-white/10 transition"
           >
-            View Success Stories
+            See How It Works
           </Link>
+        </div>
+        <div className="reveal mt-10 grid gap-3 sm:grid-cols-4 text-xs text-white/60">
+          {[
+            "Unbiased Matching",
+            "No Hidden Fees",
+            "48-Hour Onboarding",
+            "MSP Partner Program",
+          ].map((item) => (
+            <div
+              key={item}
+              className="rounded-full border border-white/10 bg-white/5 px-4 py-2"
+            >
+              {item}
+            </div>
+          ))}
         </div>
       </div>
     </section>

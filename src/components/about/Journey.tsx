@@ -5,7 +5,7 @@ const milestones = [
   {
     year: "2010",
     title: "Founded",
-    desc: "SPOS was founded with a simple idea — make commerce infrastructure available to everyone.",
+    desc: "Clovpay was founded with a simple idea — make commerce infrastructure available to everyone.",
   },
   {
     year: "2012",
@@ -41,20 +41,20 @@ export default function Journey() {
         <SectionHeader
           gradientText="Our"
           rest="Journey"
-          subtitle="Key milestones that shaped SPOS from a startup to a global commerce platform."
+          subtitle="Key milestones that shaped Clovpay from a startup to a global commerce platform."
         />
 
         <div className="relative mx-auto max-w-4xl">
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-[#3355FF]/35 to-transparent" />
-          <div className="md:hidden absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#3355FF]/35 to-transparent" />
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-[#1FA7A1]/35 to-transparent" />
+          <div className="md:hidden absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#1FA7A1]/35 to-transparent" />
 
           <ul className="space-y-10 md:space-y-14">
             {milestones.map((m, i) => {
               const left = i % 2 === 0;
               return (
                 <li key={m.year} className="relative">
-                  <span className="hidden md:block absolute left-1/2 top-6 h-3 w-3 -translate-x-1/2 rounded-full bg-[#4A73FF] ring-4 ring-[#070B1A]" />
-                  <span className="md:hidden absolute left-4 top-6 h-3 w-3 -translate-x-1/2 rounded-full bg-[#4A73FF] ring-4 ring-[#070B1A]" />
+                  <span className="hidden md:block absolute left-1/2 top-6 h-3 w-3 -translate-x-1/2 rounded-full bg-[#1FA7A1] ring-4 ring-[#070B1A]" />
+                  <span className="md:hidden absolute left-4 top-6 h-3 w-3 -translate-x-1/2 rounded-full bg-[#1FA7A1] ring-4 ring-[#070B1A]" />
 
                   <div
                     className={`reveal rounded-2xl border border-white/8 bg-[#0D1324] p-6 md:p-7 md:w-[47%] ml-10 md:ml-0 ${
@@ -62,8 +62,8 @@ export default function Journey() {
                     }`}
                   >
                     <div className="flex items-center gap-2">
-                      <Calendar size={14} className="text-[#4A73FF]" />
-                      <span className="rounded-full bg-gradient-to-r from-[#3355FF] to-[#4A73FF] px-3 py-0.5 text-xs font-bold text-white">
+                      <Calendar size={14} className="text-[#1FA7A1]" />
+                      <span className="rounded-full bg-gradient-to-r from-[#1FA7A1] to-[#0F6F73] px-3 py-0.5 text-xs font-bold text-white">
                         {m.year}
                       </span>
                     </div>

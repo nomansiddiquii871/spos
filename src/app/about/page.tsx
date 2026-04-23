@@ -7,9 +7,9 @@ import Leadership from "@/components/about/Leadership";
 import { CTABanner } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "About — SPOS",
+  title: "About — Clovpay",
   description:
-    "Learn about SPOS — our mission, values, journey, and the team driving next-generation commerce.",
+    "Learn about Clovpay — our mission, values, journey, and the team driving next-generation commerce.",
 };
 
 export default function AboutPage() {

@@ -1,9 +1,9 @@
 import {
   Store,
-  ShoppingCart,
-  Globe2,
-  Gift,
-  Cloud,
+  Smartphone,
+  ReceiptText,
+  Building2,
+  BarChart3,
   Headphones,
   Check,
   ArrowRight,
@@ -26,45 +26,45 @@ type Feature = {
 const features: Feature[] = [
   {
     icon: Store,
-    title: "In-Store Payments",
+    title: "Smart Countertop Systems",
     description:
-      "Accept every payment method with frictionless, lightning-fast checkout at the counter.",
-    bullets: ["Chip, tap & swipe", "Offline-ready mode", "Receipt printing"],
+      "High-performance POS systems designed to be the central hub of your business.",
+    bullets: ["Unified POS power", "Real-Time Inventory", "Smart Employee Management"],
   },
   {
-    icon: ShoppingCart,
-    title: "E-Commerce",
+    icon: Smartphone,
+    title: "On-The-Go & Mobile Pay",
     description:
-      "Unify online and offline commerce with real-time inventory sync.",
-    bullets: ["Online store builder", "Unified inventory", "Multi-channel"],
+      "Take the checkout to your customers, whether you’re tableside or at a pop-up market.",
+    bullets: ["Wireless Freedom", "Long Battery Life", "Tap, Chip, & Digital Wallets"],
   },
   {
-    icon: Globe2,
-    title: "World of Payments",
+    icon: ReceiptText,
+    title: "Transparent Processing",
     description:
-      "Multi-currency processing that scales globally from day one.",
-    bullets: ["150+ currencies", "Global acquiring", "FX auto-convert"],
+      "Take the guesswork out of your monthly statement with flat-rate or interchange-plus pricing models.",
+    bullets: ["No Hidden Fees", "Dual Pricing Options", "Wholesale Rate"],
   },
   {
-    icon: Gift,
-    title: "Loyalty & Rewards",
+    icon: Building2,
+    title: "Specialized Industry Solutions",
     description:
-      "Grow retention with automated loyalty, promotions and gift cards.",
-    bullets: ["Points & tiers", "Targeted offers", "Gift card sales"],
+      "We don’t believe in \"one size fits all.\" We match your business type with the perfect hardware.",
+    bullets: ["Retail & Grocery", "Restaurants", "Service Base Businesses", "High Risk Businesses"],
   },
   {
-    icon: Cloud,
-    title: "Cloud Infrastructure",
+    icon: BarChart3,
+    title: "Business Management",
     description:
-      "Enterprise-grade cloud with 99.99% uptime and bank-level encryption.",
-    bullets: ["Auto-scaling", "PCI-DSS secure", "Realtime backups"],
+      "Manage your entire business from your phone or laptop with cloud-synced back-office tools.",
+    bullets: ["Inventory Tracking", "Employee Management", "PCI-DSS Security"],
   },
   {
     icon: Headphones,
-    title: "Customer Support",
+    title: "24/7 Local Reliability",
     description:
-      "24/7 human support whenever you need us — chat, email or phone.",
-    bullets: ["24/7 live agents", "<2 min response", "Dedicated onboarding"],
+      "We don’t just mail you a box. We provide full setup, training, and ongoing local support.",
+    bullets: ["Same-Day Swap", "Direct Human Access", "White-Glove Implementation"],
   },
 ];
 
@@ -75,12 +75,12 @@ export default function CoreFeatures() {
         <SectionHeader
           pill={
             <span className="flex items-center gap-1.5">
-              <Zap size={13} className="text-[#4A73FF]" /> Core Features
+              <Zap size={13} className="text-[#1FA7A1]" /> Core Features
             </span>
           }
-          gradientText="Powerful Features"
-          rest="for Modern Businesses"
-          subtitle="Everything you need to run, grow and scale your commerce operation — thoughtfully engineered into a single unified platform."
+          gradientText="Everything You Need"
+          rest="to Accept Payments Everywhere"
+          subtitle="From countertop terminals to mobile handhelds and online checkouts we provide the hardware and the horsepower to keep your business moving."
         />
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -100,8 +100,8 @@ export default function CoreFeatures() {
                     key={b}
                     className="flex items-center gap-3 text-sm text-white/80"
                   >
-                    <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#3355FF]/15">
-                      <Check size={12} className="text-[#4A73FF]" />
+                    <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#1FA7A1]/15">
+                      <Check size={12} className="text-[#1FA7A1]" />
                     </span>
                     {b}
                   </li>
@@ -109,7 +109,7 @@ export default function CoreFeatures() {
               </ul>
               <a
                 href="#"
-                className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#4A73FF] hover:text-[#6FA8FF] transition"
+                className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#1FA7A1] hover:text-[#6ED3CC] transition"
               >
                 Learn More <ArrowRight size={14} />
               </a>

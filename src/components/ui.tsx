@@ -58,7 +58,7 @@ export function PrimaryButton({
 }) {
   const cls = `inline-flex ${
     full ? "w-full " : ""
-  }items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#3355FF] to-[#4A73FF] px-6 py-3 font-semibold text-white btn-glow hover:brightness-110 transition`;
+  }items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#1FA7A1] to-[#0F6F73] px-6 py-3 font-semibold text-white btn-glow hover:brightness-110 transition`;
   if (href) {
     return (
       <Link href={href} className={cls}>
@@ -125,11 +125,11 @@ export function IconTile({
   variant?: "blue" | "green" | "pink" | "purple" | "orange";
 }) {
   const grads: Record<string, string> = {
-    blue: "from-[#5166FF] to-[#8A5FFF]",
-    green: "from-[#10B981] to-[#059669]",
-    pink: "from-[#EC4899] to-[#DB2777]",
-    purple: "from-[#A855F7] to-[#7C3AED]",
-    orange: "from-[#F59E0B] to-[#EA580C]",
+    blue: "from-[#6ED3CC] to-[#1FA7A1]",
+    green: "from-[#1FA7A1] to-[#0F6F73]",
+    pink: "from-[#2ED3D0] to-[#1FA7A1]",
+    purple: "from-[#6ED3CC] to-[#0F6F73]",
+    orange: "from-[#8FE7DF] to-[#1FA7A1]",
   };
   return (
     <div
@@ -153,7 +153,7 @@ export function CTABanner({
 }) {
   return (
     <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      <div className="reveal rounded-3xl border border-white/10 bg-gradient-to-br from-[#0D1324] to-[#0A1430] p-8 md:p-12 flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+      <div className="reveal rounded-3xl border border-white/10 bg-gradient-to-br from-[#0D1324] to-[#071A20] p-8 md:p-12 flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
         <div className="flex-1">
           <h3 className="text-2xl md:text-3xl font-extrabold text-white">
             {title}

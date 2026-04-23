@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 import FooterNewsletter from "./FooterNewsletter";
+import BrandLogo from "./BrandLogo";
 
 const iconCls = "h-4 w-4";
 
@@ -32,7 +33,7 @@ const YoutubeIcon = () => (
 
 const quickLinks = [
   { href: "/", label: "Home" },
-  { href: "/equipment", label: "Equipment" },
+  { href: "/business", label: "Business" },
   { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact" },
 ];
@@ -57,7 +58,7 @@ const resources = [
 
 function ColumnHeading({ children }: { children: React.ReactNode }) {
   return (
-    <h4 className="relative mb-6 text-white font-semibold after:absolute after:left-0 after:-bottom-2 after:h-0.5 after:w-8 after:rounded-full after:bg-[#3355FF]">
+    <h4 className="relative mb-6 text-white font-semibold after:absolute after:left-0 after:-bottom-2 after:h-0.5 after:w-8 after:rounded-full after:bg-[#1FA7A1]">
       {children}
     </h4>
   );
@@ -68,32 +69,27 @@ export default function Footer() {
     <footer className="border-t border-white/5 bg-[#06091A]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Link href="/" className="flex items-center gap-2 mb-5">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-[#3355FF] to-[#8A5FFF] text-white font-black">
-              S
-            </span>
-            <span className="font-bold text-lg tracking-tight">SPOS</span>
-          </Link>
+          <BrandLogo href="/" width={180} height={58} className="mb-5" imageClassName="h-14 w-auto object-contain" />
           <p className="text-sm text-white/65 leading-relaxed max-w-xs mb-6">
             Revolutionizing retail with cutting-edge POS technology built for
             modern businesses of every size.
           </p>
           <ul className="space-y-3 text-sm text-white/75">
             <li className="flex items-start gap-3">
-              <Phone size={16} className="mt-0.5 text-[#4A73FF]" />
+              <Phone size={16} className="mt-0.5 text-[#1FA7A1]" />
               <span>888-000-1234 · 877-000-5678</span>
             </li>
             <li className="flex items-start gap-3">
-              <Mail size={16} className="mt-0.5 text-[#4A73FF]" />
+              <Mail size={16} className="mt-0.5 text-[#1FA7A1]" />
               <a
-                href="mailto:support@spos.com"
+                href="mailto:support@clovpay.com"
                 className="hover:text-white transition"
               >
-                support@spos.com
+                support@clovpay.com
               </a>
             </li>
             <li className="flex items-start gap-3">
-              <MapPin size={16} className="mt-0.5 text-[#4A73FF]" />
+              <MapPin size={16} className="mt-0.5 text-[#1FA7A1]" />
               <span>246 E Blueridge Ave, Orange, CA 92865, USA</span>
             </li>
           </ul>
@@ -165,7 +161,7 @@ export default function Footer() {
 
       <div className="border-t border-white/5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/55">
-          <p>© {new Date().getFullYear()} SPOS. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Clovpay. All rights reserved.</p>
           <div className="flex items-center gap-5">
             <a href="#" className="hover:text-white transition">
               Privacy Policy

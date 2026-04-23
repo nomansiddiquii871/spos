@@ -92,7 +92,7 @@ export default function Integrations() {
             Our team can build bespoke integrations tailored to your stack.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3">
-            <PrimaryButton href="/services">Explore Integrations</PrimaryButton>
+            <PrimaryButton href="/business">Explore Integrations</PrimaryButton>
             <GhostButton href="/contact">Request Custom Integration</GhostButton>
           </div>
         </div>

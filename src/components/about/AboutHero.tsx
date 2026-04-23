@@ -15,7 +15,7 @@ export default function AboutHero() {
         <div className="relative text-center max-w-3xl mx-auto">
           <div className="reveal">
             <SectionPill>
-              <Rocket size={14} className="text-[#4A73FF]" />
+              <Rocket size={14} className="text-[#1FA7A1]" />
               Our Story
             </SectionPill>
           </div>

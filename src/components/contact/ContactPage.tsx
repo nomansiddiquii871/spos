@@ -25,8 +25,8 @@ const channels = [
     icon: Mail,
     title: "Email Us",
     desc: "We reply within 2 hours",
-    meta: "support@spos.com",
-    href: "mailto:support@spos.com",
+    meta: "support@clovpay.com",
+    href: "mailto:support@clovpay.com",
   },
   {
     icon: MapPin,
@@ -81,7 +81,7 @@ export default function ContactPage() {
           <div className="text-center max-w-3xl mx-auto">
             <div className="reveal">
               <SectionPill>
-                <MessageSquare size={14} className="text-[#4A73FF]" />
+                <MessageSquare size={14} className="text-[#1FA7A1]" />
                 Get in Touch
               </SectionPill>
             </div>
@@ -105,9 +105,9 @@ export default function ContactPage() {
               <a
                 key={c.title}
                 href={c.href}
-                className="reveal group rounded-2xl border border-white/8 bg-[#0D1324] p-6 hover:border-[#3355FF]/50 hover:-translate-y-1 transition"
+                className="reveal group rounded-2xl border border-white/8 bg-[#0D1324] p-6 hover:border-[#1FA7A1]/50 hover:-translate-y-1 transition"
               >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[#3355FF] to-[#8A5FFF]">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[#1FA7A1] to-[#0F6F73]">
                   <c.icon className="h-5 w-5 text-white" />
                 </span>
                 <div className="mt-4 text-lg font-bold text-white">{c.title}</div>
@@ -178,8 +178,8 @@ export default function ContactPage() {
                         onClick={() => update("reason", r)}
                         className={`rounded-full px-3.5 py-1.5 text-xs font-semibold border transition ${
                           form.reason === r
-                            ? "bg-gradient-to-r from-[#3355FF] to-[#4A73FF] border-transparent text-white"
-                            : "border-white/12 bg-white/5 text-white/80 hover:bg-white/10"
+                            ? "bg-gradient-to-r from-[#1FA7A1] to-[#0F6F73] border-transparent text-white"
+                              : "border-white/12 bg-white/5 text-white/80 hover:bg-white/10"
                         }`}
                       >
                         {r}
@@ -198,14 +198,14 @@ export default function ContactPage() {
                     value={form.message}
                     onChange={(e) => update("message", e.target.value)}
                     placeholder="Tell us about your business and what you're looking for…"
-                    className="mt-2 w-full rounded-xl bg-[#0A1020] border border-white/10 px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#3355FF] resize-y"
+                    className="mt-2 w-full rounded-xl bg-[#0A1020] border border-white/10 px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#1FA7A1] resize-y"
                   />
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-2">
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#3355FF] to-[#4A73FF] px-6 py-3 font-semibold text-white btn-glow hover:brightness-110 transition"
+                    className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#1FA7A1] to-[#0F6F73] px-6 py-3 font-semibold text-white btn-glow hover:brightness-110 transition"
                   >
                     <Send size={16} /> Send Message
                   </button>
@@ -246,7 +246,7 @@ export default function ContactPage() {
 
               <div className="reveal rounded-3xl border border-white/10 bg-[#0D1324] p-6">
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#3355FF] to-[#8A5FFF]">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#1FA7A1] to-[#0F6F73]">
                     <Clock className="h-5 w-5 text-white" />
                   </span>
                   <h3 className="text-lg font-bold text-white">
@@ -270,7 +270,7 @@ export default function ContactPage() {
               </div>
 
               <div className="reveal rounded-3xl border border-white/10 bg-gradient-to-br from-[#0D1324] to-[#0A1430] p-6">
-                <Calendar className="h-7 w-7 text-[#6FA8FF]" />
+                <Calendar className="h-7 w-7 text-[#1FA7A1]" />
                 <h3 className="mt-3 text-lg font-bold text-white">
                   Prefer a quick call?
                 </h3>
@@ -279,7 +279,7 @@ export default function ContactPage() {
                 </p>
                 <div className="mt-5 flex flex-col sm:flex-row gap-3">
                   <PrimaryButton href="#">Schedule a Call</PrimaryButton>
-                  <GhostButton href="/faqs">View FAQs</GhostButton>
+                  <GhostButton href="/contact">Contact Support</GhostButton>
                 </div>
               </div>
             </aside>
@@ -336,7 +336,7 @@ function Field({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="mt-2 w-full rounded-xl bg-[#0A1020] border border-white/10 px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#3355FF]"
+                    className="mt-2 w-full rounded-xl bg-[#0A1020] border border-white/10 px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#1FA7A1]"
       />
     </div>
   );

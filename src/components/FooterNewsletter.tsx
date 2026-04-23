@@ -18,7 +18,7 @@ export default function FooterNewsletter() {
         <button
           aria-label="Subscribe"
           type="submit"
-          className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-gradient-to-r from-[#3355FF] to-[#4A73FF] text-white hover:brightness-110 transition"
+          className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-gradient-to-r from-[#1FA7A1] to-[#0F6F73] text-white hover:brightness-110 transition"
         >
           <ArrowRight size={16} />
         </button>

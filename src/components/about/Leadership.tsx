@@ -34,7 +34,7 @@ export default function Leadership() {
         <SectionHeader
           gradientText="Leadership"
           rest="Team"
-          subtitle="Meet the visionaries and experts driving innovation and growth at SPOS."
+          subtitle="Meet the visionaries and experts driving innovation and growth at Clovpay."
         />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {team.map((m) => (
@@ -46,10 +46,10 @@ export default function Leadership() {
               <img
                 src={m.avatar}
                 alt={m.name}
-                className="mx-auto h-24 w-24 rounded-full object-cover ring-2 ring-[#3355FF]/40"
+                className="mx-auto h-24 w-24 rounded-full object-cover ring-2 ring-[#1FA7A1]/40"
               />
               <h3 className="mt-4 text-lg font-bold text-white">{m.name}</h3>
-              <p className="text-sm text-[#6FA8FF]">{m.role}</p>
+              <p className="text-sm text-[#6ED3CC]">{m.role}</p>
               <p className="mt-3 text-sm text-white/65">{m.bio}</p>
             </div>
           ))}

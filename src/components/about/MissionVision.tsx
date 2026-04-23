@@ -7,7 +7,7 @@ export default function MissionVision() {
       <Container>
         <div className="grid gap-5 md:grid-cols-2">
           <div className="reveal rounded-2xl border border-white/8 bg-[#0D1324] p-8">
-            <Target className="h-9 w-9 text-[#6FA8FF]" strokeWidth={2} />
+            <Target className="h-9 w-9 text-[#1FA7A1]" strokeWidth={2} />
             <h3 className="mt-5 text-2xl font-bold text-white">Our Mission</h3>
             <p className="mt-3 text-white/70 leading-relaxed">
               Empower businesses of every size with simple, powerful commerce
@@ -16,7 +16,7 @@ export default function MissionVision() {
             </p>
           </div>
           <div className="reveal rounded-2xl border border-white/8 bg-[#0D1324] p-8">
-            <Globe className="h-9 w-9 text-[#6FA8FF]" strokeWidth={2} />
+            <Globe className="h-9 w-9 text-[#1FA7A1]" strokeWidth={2} />
             <h3 className="mt-5 text-2xl font-bold text-white">Our Vision</h3>
             <p className="mt-3 text-white/70 leading-relaxed">
               A world where every merchant, in every corner of the globe, has
