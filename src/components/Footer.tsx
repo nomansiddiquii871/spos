@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin } from "lucide-react";
-import FooterNewsletter from "./FooterNewsletter";
+import { Mail, MapPin, Clock } from "lucide-react";
 import BrandLogo from "./BrandLogo";
 
 const iconCls = "h-4 w-4";
@@ -38,24 +37,6 @@ const quickLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-const solutions = [
-  "POS Systems",
-  "Payment Processing",
-  "Inventory Management",
-  "Analytics Dashboard",
-  "Customer Management",
-  "Employee Management",
-];
-
-const resources = [
-  "Documentation",
-  "API Reference",
-  "Support Center",
-  "Training Videos",
-  "Blog",
-  "Case Studies",
-];
-
 function ColumnHeading({ children }: { children: React.ReactNode }) {
   return (
     <h4 className="relative mb-6 text-white font-semibold after:absolute after:left-0 after:-bottom-2 after:h-0.5 after:w-8 after:rounded-full after:bg-[#1FA7A1]">
@@ -67,7 +48,7 @@ function ColumnHeading({ children }: { children: React.ReactNode }) {
 export default function Footer() {
   return (
     <footer className="border-t border-white/5 bg-[#06091A]">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid gap-10 md:grid-cols-2 lg:grid-cols-2">
         <div>
           <BrandLogo href="/" width={180} height={58} className="mb-5" imageClassName="h-14 w-auto object-contain" />
           <p className="text-sm text-white/65 leading-relaxed max-w-xs mb-6">
@@ -76,21 +57,24 @@ export default function Footer() {
           </p>
           <ul className="space-y-3 text-sm text-white/75">
             <li className="flex items-start gap-3">
-              <Phone size={16} className="mt-0.5 text-[#1FA7A1]" />
-              <span>888-000-1234 · 877-000-5678</span>
+              <Clock size={16} className="mt-0.5 text-[#1FA7A1]" />
+              <div>
+                <div className="font-medium text-white">Business Hours</div>
+                <div>Monday - Friday: 9:00 AM - 6:00 PM</div>
+              </div>
             </li>
             <li className="flex items-start gap-3">
               <Mail size={16} className="mt-0.5 text-[#1FA7A1]" />
               <a
-                href="mailto:support@clovpay.com"
+                href="mailto:Clovpaymarketing@gmail.com"
                 className="hover:text-white transition"
               >
-                support@clovpay.com
+                Clovpaymarketing@gmail.com
               </a>
             </li>
             <li className="flex items-start gap-3">
               <MapPin size={16} className="mt-0.5 text-[#1FA7A1]" />
-              <span>246 E Blueridge Ave, Orange, CA 92865, USA</span>
+              <span>1240b E Stringham Ave, Salt Lake City, UT 84106</span>
             </li>
           </ul>
 
@@ -114,7 +98,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div>
+        <div className="md:justify-self-start lg:justify-self-end">
           <ColumnHeading>Quick Links</ColumnHeading>
           <ul className="space-y-3 text-sm">
             {quickLinks.map((l) => (
@@ -129,40 +113,12 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-
-        <div>
-          <ColumnHeading>Solutions</ColumnHeading>
-          <ul className="space-y-3 text-sm">
-            {solutions.map((l) => (
-              <li key={l}>
-                <a href="#" className="text-white/75 hover:text-white transition">
-                  {l}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <ColumnHeading>Resources</ColumnHeading>
-          <ul className="space-y-3 text-sm mb-6">
-            {resources.map((l) => (
-              <li key={l}>
-                <a href="#" className="text-white/75 hover:text-white transition">
-                  {l}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          <FooterNewsletter />
-        </div>
       </div>
 
       <div className="border-t border-white/5">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/55">
-          <p>© {new Date().getFullYear()} Clovpay. All rights reserved.</p>
-          <div className="flex items-center gap-5">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center sm:items-start md:items-center justify-between gap-3 text-xs text-white/55">
+          <p className="text-center sm:text-left">© {new Date().getFullYear()} Clovpay. All rights reserved.</p>
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-x-5 gap-y-2">
             <a href="#" className="hover:text-white transition">
               Privacy Policy
             </a>

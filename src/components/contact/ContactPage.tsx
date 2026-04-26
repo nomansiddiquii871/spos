@@ -11,31 +11,9 @@ import {
   Send,
   CheckCircle,
 } from "lucide-react";
-import { Container, SectionPill, SectionHeader, PrimaryButton, GhostButton } from "@/components/ui";
+import { Container, SectionPill, PrimaryButton, GhostButton } from "@/components/ui";
 
-const channels = [
-  {
-    icon: Phone,
-    title: "Call Us",
-    desc: "Mon–Sat, 8AM–8PM PT",
-    meta: "888-000-1234",
-    href: "tel:8880001234",
-  },
-  {
-    icon: Mail,
-    title: "Email Us",
-    desc: "We reply within 2 hours",
-    meta: "support@clovpay.com",
-    href: "mailto:support@clovpay.com",
-  },
-  {
-    icon: MapPin,
-    title: "Visit Us",
-    desc: "Headquarters",
-    meta: "246 E Blueridge Ave, Orange CA",
-    href: "#",
-  },
-];
+const channels = [];
 
 const reasons = [
   "Sales Inquiry",
@@ -98,28 +76,7 @@ export default function ContactPage() {
         </Container>
       </section>
 
-      <section className="pb-10">
-        <Container>
-          <div className="grid gap-5 sm:grid-cols-3">
-            {channels.map((c) => (
-              <a
-                key={c.title}
-                href={c.href}
-                className="reveal group rounded-2xl border border-white/8 bg-[#0D1324] p-6 hover:border-[#1FA7A1]/50 hover:-translate-y-1 transition"
-              >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[#1FA7A1] to-[#0F6F73]">
-                  <c.icon className="h-5 w-5 text-white" />
-                </span>
-                <div className="mt-4 text-lg font-bold text-white">{c.title}</div>
-                <div className="mt-1 text-sm text-white/60">{c.desc}</div>
-                <div className="mt-3 text-sm font-semibold text-gradient break-words">
-                  {c.meta}
-                </div>
-              </a>
-            ))}
-          </div>
-        </Container>
-      </section>
+
 
       <section className="py-16 md:py-24">
         <Container>
@@ -217,7 +174,7 @@ export default function ContactPage() {
                 {sent && (
                   <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-4 flex items-center gap-3 text-emerald-300 text-sm">
                     <CheckCircle size={16} />
-                    Thanks! Your message was sent — we&apos;ll be in touch soon.
+                    Thanks! Your message was sent. We&apos;ll be in touch soon.
                   </div>
                 )}
               </form>
@@ -237,9 +194,12 @@ export default function ContactPage() {
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-white">Headquarters</h3>
                   <p className="mt-2 text-sm text-white/70">
-                    246 E Blueridge Ave
-                    <br />
-                    Orange, CA 92865, USA
+                    1240b E Stringham Ave, Salt Lake City, UT 84106
+                  </p>
+                  <p className="mt-3 text-sm text-white/70">
+                    <a href="mailto:Clovpaymarketing@gmail.com" className="hover:text-white transition">
+                      Clovpaymarketing@gmail.com
+                    </a>
                   </p>
                 </div>
               </div>
@@ -255,16 +215,8 @@ export default function ContactPage() {
                 </div>
                 <ul className="mt-4 space-y-2 text-sm text-white/75">
                   <li className="flex justify-between">
-                    <span>Mon – Fri</span>
-                    <span className="text-white">8:00 AM – 8:00 PM</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Saturday</span>
-                    <span className="text-white">10:00 AM – 5:00 PM</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Sunday</span>
-                    <span className="text-white/50">Closed</span>
+                    <span>Monday - Friday</span>
+                    <span className="text-white">9:00 AM - 6:00 PM</span>
                   </li>
                 </ul>
               </div>
@@ -283,25 +235,6 @@ export default function ContactPage() {
                 </div>
               </div>
             </aside>
-          </div>
-        </Container>
-      </section>
-
-      <section className="pb-16 md:pb-24">
-        <Container>
-          <SectionHeader
-            gradientText="Find"
-            rest="Us"
-            subtitle="Drop by our headquarters or any of our regional offices."
-          />
-          <div className="reveal overflow-hidden rounded-3xl border border-white/10 bg-[#0D1324] aspect-[16/9]">
-            <iframe
-              title="Map"
-              className="h-full w-full"
-              loading="lazy"
-              src="https://www.google.com/maps?q=246+E+Blueridge+Ave,+Orange,+CA+92865&output=embed"
-              style={{ filter: "invert(0.92) hue-rotate(180deg) saturate(0.7)" }}
-            />
           </div>
         </Container>
       </section>

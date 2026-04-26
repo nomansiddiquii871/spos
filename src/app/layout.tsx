@@ -12,7 +12,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Clovpay — Smart Payment Solutions",
+  title: "Clovpay Smart Payment Solutions",
   description:
     "Next-generation payment platform with in-store payments, e-commerce, analytics, cloud infrastructure and 24/7 support for modern businesses.",
 };

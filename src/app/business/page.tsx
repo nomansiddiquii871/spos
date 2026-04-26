@@ -6,7 +6,7 @@ import BusinessEdge from "@/components/business/BusinessEdge";
 import BusinessCTA from "@/components/business/BusinessCTA";
 
 export const metadata: Metadata = {
-  title: "Business Growth Solutions — Clovpay",
+  title: "Business Growth Solutions Clovpay",
   description:
     "Measurable growth for modern retail, F&B, gyms and service businesses. See how Clovpay drives ROI.",
 };
